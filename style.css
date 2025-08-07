@@ -1,0 +1,70 @@
+/* general settings */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/* index settings */
+#cover-container {
+    background-color: darkslategray;
+    height: 100vh;
+}
+
+#content-container {
+    background-color: black;
+}
+
+#quote-container {
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-family: Bugatti Display,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";    
+    font-size: 30px;
+}
+
+#rules-container {
+    background-color: darkgreen;
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-content: start;
+}
+.rule>.card {
+    background-color: coral;
+    width: 300px;        /* 250 X */
+    height: 420px;       /* 350 X */
+    border-radius: 8px;
+}
+.rule>h2 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.rule>p {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+#credits-container {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    height: 600px;
+    font-size: 20px;
+}
+
+
+
+
+
+/* rule settings */
