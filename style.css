@@ -10,16 +10,31 @@ body {
 
 
 
+
 /* index settings */
 #cover-container {
     background-color: rgb(28, 48, 48);
+    background-image: url(files/placeholder.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 100vh;
+    color: white;
+    font-size: 90px;
+    overflow: hidden;
 }
+#cover-container>a, #cover-container>h1{
+    color: white;
+    mix-blend-mode: difference;
+    text-decoration: none;
+}
+
 
 #content-container {
     background-color: black;
     overflow: hidden;
 }
+
 
 #quote-container {
     background-color: rgb(50, 0, 0);
@@ -32,13 +47,14 @@ body {
     font-size: 30px;
 }
 
+
 #rules-container {
     background-color: rgb(0, 50, 0);
     max-width: 1500px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     padding: 20px;
     justify-content: center;
     align-content: start;
@@ -49,6 +65,12 @@ body {
     aspect-ratio: 5 / 7;
     border-radius: 8px;
     margin: auto;
+}
+#rule-1-card {
+    background-image: url(files/placeholder.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .rule>h2 {
     text-align: center;
@@ -61,6 +83,7 @@ body {
     text-align: center;
 }
 
+
 #credits-container {
     background-color: rgb(0, 0, 50);
     color: white;
@@ -70,6 +93,7 @@ body {
     max-height: max(90vh, 150px);
     font-size: 20px;
 }
+
 
 
 
