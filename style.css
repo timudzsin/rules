@@ -16,7 +16,7 @@ body {
 
 
 
-/* index settings */
+/* main websites settings */
 #cover-container {
     height: 100vh;
     overflow: hidden;
@@ -42,7 +42,7 @@ body {
     position: relative;
     z-index: 1;
     text-align: center;
-    font-size: max(25px, 1.6vw);
+    font-size: max(25px, 1.7vw);
     /*filter: blur(min(0.05vw, 0.05vh));*/
 }
 #cover-container>h1 {
@@ -52,7 +52,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);    
     width: 100%;
-    filter: blur(min(0.15vw, 0.15vh));
+    filter: blur(min(0.1vw, 0.1vh));
     pointer-events: none;
 }
 #eng-title {
@@ -63,20 +63,17 @@ body {
 }
 
 
-#content-container {
-    overflow: hidden;
-}
-
 
 #quote-container {
     color: white;
     text-align: right;
-    padding: 10px;
+    padding: 4vw;
     padding-top: 80px;
     padding-bottom: 80px;
     font-family: Bugatti Display,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";    
     font-size: 30px;
 }
+
 
 
 #rules-container {
@@ -90,11 +87,16 @@ body {
     align-content: start;
 }
 .rule>.card {
-    background-color: rgb(200, 200, 200);
-    width: min(330px, 94vw, calc(94vh * 5 / 7));
+    background-color: rgb(100, 100, 100);
+    width: min(320px, 94vw, calc(94vh * 5 / 7));
     aspect-ratio: 5 / 7;
     border-radius: 8px;
     margin: auto;
+}
+.rule>.card>a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 #rule-1-card {
     background-image: url(files/placeholder.png);
@@ -168,6 +170,7 @@ body {
 }
 
 
+
 #credits-container {
     color: white;
     text-align: center;
@@ -182,4 +185,4 @@ body {
 
 
 
-/* rule settings */
+/* rule websites settings */
