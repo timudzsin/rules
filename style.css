@@ -52,7 +52,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);    
     width: 100%;
-    filter: blur(min(0.1vw, 0.1vh));
+    filter: blur(min(0.15vw, 0.15vh));
     pointer-events: none;
 }
 #eng-title {
@@ -91,7 +91,7 @@ body {
 }
 .rule>.card {
     background-color: rgb(200, 200, 200);
-    width: min(300px, 95vw, calc(95vh * 5 / 7));
+    width: min(330px, 94vw, calc(94vh * 5 / 7));
     aspect-ratio: 5 / 7;
     border-radius: 8px;
     margin: auto;
