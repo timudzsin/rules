@@ -10,6 +10,11 @@
 }
 body {
     background-color: black;
+    opacity: 0;
+    transition: opacity 0.6s ease-in;
+}
+body.loaded-body {
+    opacity: 1;
 }
 
 
@@ -23,7 +28,7 @@ body {
     text-align: center;
 }
 #cover-video {
-    background: rgb(125, 0, 125);
+    background: rgb(255, 0, 0);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -87,7 +92,6 @@ body {
     align-content: start;
 }
 .rule>.card {
-    background-color: rgb(100, 100, 100);
     width: min(320px, 94vw, calc(94vh * 5 / 7));
     aspect-ratio: 5 / 7;
     border-radius: 8px;
@@ -99,60 +103,70 @@ body {
     height: 100%;
 }
 #rule-1-card {
+    background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #rule-2-card {
+    background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #rule-3-card {
+    background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #rule-4-card {
+    background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #rule-5-card {
+    background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #rule-6-card {
+    background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #rule-7-card {
+    background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #rule-8-card {
+    background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #rule-9-card {
+    background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #rule-10-card {
+    background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
