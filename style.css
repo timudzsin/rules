@@ -28,13 +28,12 @@ body.loaded-body {
     text-align: center;
 }
 #cover-video {
-    background: rgb(255, 0, 0);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
+    width: 100.1vw;
+    height: 100.1vh;
     object-fit: cover;
 }
 #cover-container>a, #cover-container>h1{
@@ -46,12 +45,10 @@ body.loaded-body {
 #cover-container>a {
     position: relative;
     z-index: 1;
-    text-align: center;
     font-size: max(25px, 1.7vw);
     /*filter: blur(min(0.05vw, 0.05vh));*/
 }
 #cover-container>h1 {
-    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -70,6 +67,7 @@ body.loaded-body {
 
 
 #quote-container {
+    overflow: hidden;
     color: white;
     text-align: right;
     padding: 4vw;
@@ -83,6 +81,7 @@ body.loaded-body {
 
 #rules-container {
     /*max-width: 1600px;*/
+    overflow: hidden;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -188,6 +187,7 @@ body.loaded-body {
 
 
 #credits-container {
+    overflow: hidden;
     color: white;
     text-align: center;
     padding-top: 100px;
