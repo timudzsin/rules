@@ -11,7 +11,7 @@
 body {
     background-color: black;
     opacity: 0;
-    transition: opacity 0.6s ease-in;
+    transition: opacity 0.8s ease-in;
 }
 body.loaded-body {
     opacity: 1;
