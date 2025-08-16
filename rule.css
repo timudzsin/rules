@@ -22,83 +22,50 @@ body.loaded-body {
 
 
 
-#cover-container {
-    height: 100vh;
-    overflow: hidden;
+#rule-1-cover-container {
+    height: 90vh;
+    background-image: url(files/blue.jpg);
+    background-position: center;
+    background-size: cover;
     position: relative;
-    text-align: center;
-}
-#cover-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100.1vw;
-    height: 100.1vh;
-    object-fit: cover;
-}
-#cover-container>a, #cover-container>h1{
-    color: white;
-    mix-blend-mode: difference;
-    text-decoration: none;
-    font-family: "808s_font";
-}
-#cover-container>a {
-    position: relative;
-    z-index: 1;
-    font-size: max(25px, 1.7vw);
-    /*filter: blur(min(0.05vw, 0.05vh));*/
-}
-#cover-container>h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
-    width: 100%;
-    filter: blur(min(0.1vw, 0.1vh));
-    pointer-events: none;
-}
-#eng-title {
-    font-size: min(22vw, 55vh);
-}
-#hun-title {
-    font-size: min(19vw, 55vh);
-}
-
-
-
-
-#quote-container {
     overflow: hidden;
-    color: white;
-    text-align: right;
-    padding: 4vw;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    font-size: 30px;
-    font-family: "808s_font";
+}
+#rule-1-cover-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60vh; /* size of the fade */
+    background: linear-gradient(to bottom, transparent, black);
 }
 
 
 
 
-#rules-container {
-    /*max-width: 1600px;*/
-    overflow: hidden;
+
+.first-5-rule-container {
+    max-width: 1100px;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
     padding: 20px;
-    justify-content: center;
-    align-content: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-.rule>.card {
+.last-5-rule-container {
+    background-color:darkred;
+}
+@media (max-width: 800px) {
+    .first-5-rule-container {
+        display: block;
+        grid-template-columns: none;
+    }
+}
+.card {
     width: min(320px, 94vw, calc(94vh * 5 / 7));
     aspect-ratio: 5 / 7;
     margin: auto;
 }
-.rule>.card>a {
+.card>a {
     display: block;
     width: 100%;
     height: 100%;
@@ -186,30 +153,53 @@ body.loaded-body {
     background-position: center;
     background-size: cover;
 }
-.rule>h2 {
+.rule-card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rule-card-text>h2 {
     text-align: center;
     color: white;
-    font-size: 40px;
+    font-size: 70px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.rule>p {
+.rule-card-text>p {
     text-align: center;
     color: white;
-    font-size: 25px;
+    font-size: 35px;
     font-family:  "808s_font";
 }
 
 
 
 
-#credits-container {
+
+.rule-text-container {
+    max-width: 900px;
+    margin: auto;
     overflow: hidden;
+}
+.rule-text-container>p{
+    margin: 25px;
     color: white;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    font-size: 20px;
-    font-family: "808s_font";
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
 }
 
 
+
+
+
+.back-button-container {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.back-button-container img{
+    height: 100px;
+    width: 100px;
+}
