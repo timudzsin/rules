@@ -28,6 +28,15 @@ body.loaded-body {
     position: relative;
     text-align: center;
 }
+#cover-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30vh; /* size of the fade */
+    background: linear-gradient(to bottom, transparent, black);
+}
 #cover-video {
     position: absolute;
     top: 50%;
@@ -42,10 +51,10 @@ body.loaded-body {
     mix-blend-mode: difference;
     text-decoration: none;
     font-family: "808s_font";
+    z-index: 1;
 }
 #cover-container>a {
     position: relative;
-    z-index: 1;
     font-size: max(25px, 1.7vw);
     /*filter: blur(min(0.05vw, 0.05vh));*/
 }
