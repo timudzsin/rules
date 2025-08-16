@@ -20,6 +20,7 @@ body.loaded-body {
 
 
 
+
 /* main websites settings */
 #cover-container {
     height: 100vh;
@@ -66,6 +67,7 @@ body.loaded-body {
 
 
 
+
 #quote-container {
     overflow: hidden;
     color: white;
@@ -76,6 +78,7 @@ body.loaded-body {
     font-size: 30px;
     font-family: "808s_font";
 }
+
 
 
 
@@ -93,7 +96,6 @@ body.loaded-body {
 .rule>.card {
     width: min(320px, 94vw, calc(94vh * 5 / 7));
     aspect-ratio: 5 / 7;
-    border-radius: 8px;
     margin: auto;
 }
 .rule>.card>a {
@@ -102,6 +104,8 @@ body.loaded-body {
     height: 100%;
 }
 #rule-1-card {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
@@ -109,6 +113,8 @@ body.loaded-body {
     background-size: cover;
 }
 #rule-2-card {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
@@ -116,6 +122,8 @@ body.loaded-body {
     background-size: cover;
 }
 #rule-3-card {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
@@ -123,6 +131,7 @@ body.loaded-body {
     background-size: cover;
 }
 #rule-4-card {
+    border-radius: 10px;
     background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
@@ -130,6 +139,7 @@ body.loaded-body {
     background-size: cover;
 }
 #rule-5-card {
+    border-radius: 10px;
     background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
@@ -137,6 +147,7 @@ body.loaded-body {
     background-size: cover;
 }
 #rule-6-card {
+    border-radius: 10px;
     background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
@@ -144,6 +155,7 @@ body.loaded-body {
     background-size: cover;
 }
 #rule-7-card {
+    border-radius: 10px;
     background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
@@ -151,6 +163,7 @@ body.loaded-body {
     background-size: cover;
 }
 #rule-8-card {
+    border-radius: 10px;
     background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
@@ -158,6 +171,7 @@ body.loaded-body {
     background-size: cover;
 }
 #rule-9-card {
+    border-radius: 10px;
     background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
@@ -165,6 +179,7 @@ body.loaded-body {
     background-size: cover;
 }
 #rule-10-card {
+    border-radius: 10px;
     background-color: rgb(100, 100, 100);
     background-image: url(files/placeholder.png);
     background-repeat: no-repeat;
@@ -183,6 +198,7 @@ body.loaded-body {
     font-size: 25px;
     font-family:  "808s_font";
 }
+
 
 
 
