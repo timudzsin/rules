@@ -23,7 +23,7 @@ body.loaded-body {
 
 
 #rule-1-cover-container {
-    height: 85vh;
+    height: 60vh;
     background-image: url(files/blue.jpg);
     background-position: center;
     background-size: cover;
@@ -36,8 +36,40 @@ body.loaded-body {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 60vh; /* size of the fade */
+    height: 45vh; /* size of the fade */
     background: linear-gradient(to bottom, transparent, black);
+}
+#rule-8-cover-container {
+    height: 40vh;
+    width: 100%;
+    background-image: url(files/placeholder5.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+#rule-8-cover-container::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, black, transparent, black);
+}
+#rule-10-cover-container {
+    height: 70vh;
+    background-image: url(files/pink.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+#rule-10-cover-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 52.5vh; /* size of the fade */
+    background: linear-gradient(to top, transparent, black);
 }
 
 
@@ -52,10 +84,21 @@ body.loaded-body {
     grid-template-columns: 1fr 1fr;
 }
 .last-5-rule-container {
-    background-color:darkred;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "b a";
 }
+.last-5-rule-container > :first-child { grid-area: a; }
+.last-5-rule-container > :nth-child(2) { grid-area: b; }
 @media (max-width: 800px) {
     .first-5-rule-container {
+        display: block;
+        grid-template-columns: none;
+    }
+    .last-5-rule-container {
         display: block;
         grid-template-columns: none;
     }
@@ -71,86 +114,66 @@ body.loaded-body {
     height: 100%;
 }
 #rule-1-card {
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-2-card {
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-3-card {
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-4-card {
-    border-radius: 10px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 12px;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-5-card {
-    border-radius: 10px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 12px;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-6-card {
-    border-radius: 10px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 12px;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-7-card {
-    border-radius: 10px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 12px;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-8-card {
-    border-radius: 10px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 12px;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-9-card {
-    border-radius: 10px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 12px;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-10-card {
-    border-radius: 10px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 12px;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 .rule-card-text{
@@ -179,7 +202,6 @@ body.loaded-body {
 .rule-text-container {
     max-width: 900px;
     margin: auto;
-    overflow: hidden;
 }
 .rule-text-container>p{
     margin: 25px;

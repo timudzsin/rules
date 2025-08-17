@@ -115,84 +115,64 @@ body.loaded-body {
 #rule-1-card {
     border-top-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-2-card {
     border-top-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-3-card {
     border-top-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-4-card {
     border-radius: 12px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-5-card {
     border-radius: 12px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-6-card {
     border-radius: 12px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-7-card {
     border-radius: 12px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-8-card {
     border-radius: 12px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-9-card {
     border-radius: 12px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 #rule-10-card {
     border-radius: 12px;
-    background-color: rgb(100, 100, 100);
-    background-image: url(files/placeholder.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(files/placeholder4.jpg);
+    background-position: right;
     background-size: cover;
 }
 .rule>h2 {
