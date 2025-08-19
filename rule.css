@@ -23,7 +23,7 @@ body.loaded-body {
 
 
 #rule-1-cover-container {
-    height: 60vh;
+    height: 80vh;
     background-image: url(files/blue.jpg);
     background-position: center;
     background-size: cover;
@@ -37,12 +37,12 @@ body.loaded-body {
     left: 0;
     right: 0;
     bottom: -1px;
-    height: calc(45vh + 1px); /* size of the fade */
+    height: calc(60vh + 1px); /* size of the fade */
     background: linear-gradient(to bottom, transparent, black);
     z-index: 1;
 }
 #rule-10-cover-container {
-    height: 70vh;
+    height: 80vh;
     background-image: url(files/pink.jpg);
     background-position: center;
     background-size: cover;
@@ -55,7 +55,7 @@ body.loaded-body {
     top: 0;
     left: 0;
     right: 0;
-    height: 52.5vh; /* size of the fade */
+    height: 60vh; /* size of the fade */
     background: linear-gradient(to top, transparent, black);
 }
 #grey-divider {
