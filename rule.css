@@ -1,5 +1,5 @@
 @font-face{
-    font-family: "808s_font";
+	font-family: "808s_font";
     src: url("files/Engravers\'\ Gothic\ Regular.otf") format("opentype");
 }
 * {
@@ -29,7 +29,7 @@ body.loaded-body {
     background-size: cover;
     position: relative;
     overflow: hidden;
-    z-index: -2;
+    z-index: 0;
 }
 #rule-1-cover-container::after {
     content: "";
@@ -39,7 +39,7 @@ body.loaded-body {
     bottom: 0;
     height: 45vh; /* size of the fade */
     background: linear-gradient(to bottom, transparent, black);
-    z-index: -3;
+    z-index: 1;
 }
 #rule-10-cover-container {
     height: 70vh;
@@ -120,7 +120,7 @@ body.loaded-body {
     filter: blur(min(20vw, 20vh));
     opacity: 0.15;
     pointer-events: none;
-    z-index: -1;
+    z-index: 2;
 }
 
 .card>a {
