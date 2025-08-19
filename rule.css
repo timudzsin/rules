@@ -36,8 +36,8 @@ body.loaded-body {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    height: 45vh; /* size of the fade */
+    bottom: -1px;
+    height: calc(45vh + 1px); /* size of the fade */
     background: linear-gradient(to bottom, transparent, black);
     z-index: 1;
 }
