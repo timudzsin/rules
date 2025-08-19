@@ -261,3 +261,6 @@ body.loaded-body {
     height: 100px;
     width: 100px;
 }
+.back-button-container a{
+    filter: blur(min(0.1vw, 0.1vh));	
+}
