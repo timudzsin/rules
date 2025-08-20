@@ -24,7 +24,7 @@ body.loaded-body {
 
 #rule-1-cover-container {
     height: 80vh;
-    background-image: url(files/blue.jpg);
+    background-image: url(files/paint-backdrops/wallhaven-m9kxem.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -43,7 +43,7 @@ body.loaded-body {
 }
 #rule-10-cover-container {
     height: 80vh;
-    background-image: url(files/pink.jpg);
+    background-image: url(files/paint-backdrops/wallhaven-o3rz87.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -61,7 +61,7 @@ body.loaded-body {
 #grey-divider {
     height: 40vh;
     width: 100%;
-    background-image: url(files/gray1.jpg);
+    background-image: url(files/old-files/gray1.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -262,5 +262,5 @@ body.loaded-body {
     width: 100px;
 }
 .back-button-container a{
-    filter: blur(min(0.1vw, 0.1vh));	
+    filter: blur(1px);
 }
