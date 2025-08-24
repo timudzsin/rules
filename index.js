@@ -1,5 +1,14 @@
+import { QUOTES } from "./quotesArray.js";
+
+
 // As soon as the entire page is completely loaded,
 window.addEventListener("load", () => {
+	// pick a random quote and put it inside the quote container
+	const randomIndex = Math.floor(Math.random() * QUOTES.length);
+	const randomQuote = QUOTES[randomIndex];
+	const p = document.createElement("p");
+	p.textContent = randomQuote;
+	document.getElementById("quote-container").appendChild(p);
 
     // fade in the body
     document.body.classList.add("loaded-body");

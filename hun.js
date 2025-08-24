@@ -1,7 +1,16 @@
+import { QUOTES_HUN } from "./quotesHunArray.js";
+
+
 // As soon as the entire page is completely loaded,
 window.addEventListener("load", () => {
+	// pick a random quote and put it inside the quote container
+	const randomIndex = Math.floor(Math.random() * QUOTES_HUN.length);
+	const randomQuote = QUOTES_HUN[randomIndex];
+	const p = document.createElement("p");
+	p.textContent = randomQuote;
+	document.getElementById("quote-container").appendChild(p);
 
-    // fade in the body
+	// fade in the body
     document.body.classList.add("loaded-body");
 });
 
