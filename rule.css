@@ -24,7 +24,7 @@ body.loaded-body {
 
 #rule-1-cover-container {
     height: 80vh;
-    background-image: url(files/paint-backdrops/wallhaven-m9kxem.jpg);
+    background-image: url(files/paint-backdrops/blue.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -43,7 +43,7 @@ body.loaded-body {
 }
 #rule-10-cover-container {
     height: 80vh;
-    background-image: url(files/paint-backdrops/wallhaven-o3rz87.jpg);
+    background-image: url(files/paint-backdrops/pink.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -58,20 +58,47 @@ body.loaded-body {
     height: 60vh; /* size of the fade */
     background: linear-gradient(to top, transparent, black);
 }
-#grey-divider {
+#blue-divider {
     height: 40vh;
     width: 100%;
-    background-image: url(files/old-files/gray1.jpg);
+    background-image: url(files/paint-backdrops/blue.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
     overflow: hidden;
 }
-#grey-divider::after {
+#blue-divider::after {
     content: "";
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
-    background: linear-gradient(to top, black, transparent, black);
+    background: linear-gradient(
+		to bottom,
+		black 0%,
+		transparent 5%,
+		transparent 95%,
+		black 100%
+	);
+}
+#pink-divider {
+    height: 40vh;
+    width: 100%;
+    background-image: url(files/paint-backdrops/pink.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+#pink-divider::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(
+		to bottom,
+		black 0%,
+		transparent 5%,
+		transparent 95%,
+		black 100%
+	);
 }
 
 
