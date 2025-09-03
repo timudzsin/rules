@@ -1,7 +1,3 @@
-@font-face{
-    font-family: "808s_font";
-    src: url("files/Engravers\'\ Gothic\ Regular.otf") format("opentype");
-}
 * {
     padding: 0px;
     margin: 0px;
@@ -20,55 +16,34 @@ body.loaded-body {
 
 
 
-
-
 #cover-container {
     height: 100vh;
     overflow: hidden;
     position: relative;
     text-align: center;
-}
-#cover-container::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 40vh; /* size of the fade */
-    background: linear-gradient(to bottom, transparent, black);
-}
-#cover-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100.1vw;
-    height: 100.1vh;
-    object-fit: cover;
+	background-color: #024bfb;
 }
 #cover-container>a, #cover-container>h1{
-    color: white;
-    mix-blend-mode: difference;
+    color: black;
     text-decoration: none;
-    font-family: "808s_font";
-    z-index: 1;
+    font-family: 'Times New Roman', Times, serif;
+	font-weight: bold;
 }
 #cover-container>a {
+	z-index: 11;
     position: relative;
-    font-size: max(25px, 1.7vw);
-    /*filter: blur(min(0.05vw, 0.05vh));*/
+    font-size: max(25px, 1.8vw);
 }
 #cover-container>h1 {
+	z-index: 10;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);    
     width: 100%;
-    filter: blur(min(0.1vw, 0.1vh));
-    pointer-events: none;
 }
 #eng-title {
-    font-size: min(22vw, 55vh);
+    font-size: min(20vw, 47vh);
 }
 #hun-title {
     font-size: min(19vw, 55vh);
@@ -77,160 +52,24 @@ body.loaded-body {
 
 
 
+
 #quote-container {
-    overflow: hidden;
-    color: white;
+    color: #024bfb;
     text-align: right;
     padding: 4vw;
     padding-top: 80px;
     padding-bottom: 80px;
     font-size: 30px;
-    font-family: "808s_font";
+    font-family: 'Times New Roman', Times, serif;
+	font-weight: bold;
 }
 
 
 
 
-#rules-container {
-    /*max-width: 1600px;*/
-    overflow: hidden;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 20px;
-    justify-content: center;
-    align-content: start;
-}
-.rule>.card {
-    width: min(320px, 94vw, calc(94vh * 5 / 7));
-    aspect-ratio: 5 / 7;
-    margin: auto;
-}
-.rule>.card::before{
-    content: "";
-    position: absolute;
-    width: min(320px, 94vw, calc(94vh * 5 / 7));
-    aspect-ratio: 5 / 7;
-    border-radius: inherit;
-    background-color: white;
-    filter: blur(min(20vw, 20vh));
-    opacity: 0.15;
-    pointer-events: none;
-    z-index: -1;
-}
-.rule>.card>a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-#rule-1-card {
-    border-top-left-radius: 14px;
-    border-bottom-right-radius: 14px;
-    background-image: url(files/rorschach/rorschach-blot-5.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgb(247,232,225);
-    background-size: 130%;
-}
-#rule-2-card {
-    border-top-left-radius: 14px;
-    border-bottom-right-radius: 14px;
-    background-image: url(files/rorschach/rorschach-blot-3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgb(247,232,225);
-    background-size: 165%;
-}
-#rule-3-card {
-    border-top-left-radius: 14px;
-    border-bottom-right-radius: 14px;
-    background-image: url(files/rorschach/rorschach-blot-4.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgb(247,232,225);
-    background-size: 140%;
-}
-#rule-4-card {
-    border-radius: 11px;
-    background-image: url(files/rorschach/rorschach-blot-6.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgb(247,232,225);
-    background-size: 160%;
-}
-#rule-5-card {
-    border-radius: 11px;
-    background-image: url(files/rorschach/rorschach-blot-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgb(247,232,225);
-    background-size: 165%;
-}
-#rule-6-card {
-    border-radius: 11px;
-    background-image: url(files/rorschach/rorschach-blot-7.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: white;
-    background-size: 150%;
-}
-#rule-7-card {
-    border-radius: 11px;
-    background-image: url(files/rorschach/rorschach-blot-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgb(247,232,225);
-    background-size: 110%;
-}
-#rule-8-card {
-    border-radius: 11px;
-    background-image: url(files/rorschach/rorschach-blot-9.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgb(240,250,250);
-    background-size: 115%;
-}
-#rule-9-card {
-    border-radius: 11px;
-    background-image: url(files/rorschach/rorschach-blot-8.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgb(240,250,250);
-    background-size: 130%;
-}
-#rule-10-card {
-    border-radius: 11px;
-    background-image: url(files/rorschach/rorschach-blot-10.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgb(240,250,250);
-    background-size: 105%;
-}
-.rule>h2 {
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.rule>p {
-    text-align: center;
-    color: white;
-    font-size: 25px;
-    font-family:  "808s_font";
-}
 
-
-
-
-#credits-container {
-    overflow: hidden;
-    color: white;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    font-size: 20px;
-    font-family: "808s_font";
+#rule-containers-container {
+	
 }
 
 
