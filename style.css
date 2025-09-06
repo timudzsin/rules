@@ -21,7 +21,7 @@ body.loaded-body {
     overflow: hidden;
     position: relative;
     text-align: center;
-	background-color: #024bfb;
+	background-color: #e3af1e;
 }
 #cover-container>a, #cover-container>h1{
     color: black;
@@ -54,7 +54,7 @@ body.loaded-body {
 
 
 #quote-container {
-    color: #024bfb;
+    color: #e3af1e;
     text-align: right;
     padding: 4vw;
     padding-top: 80px;
@@ -69,7 +69,136 @@ body.loaded-body {
 
 
 #rule-containers-container {
-	
+	max-width: 1400px;
+    margin: auto;
+	display: grid;
+    gap: 50px;
+    padding: 20px;
+	grid-auto-flow: column;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
+.first-5-rule-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "TEXT CARD";
+}
+.last-5-rule-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "CARD TEXT";
+}
+
+
+.rule-text-container {
+	grid-area: TEXT;
+	color: white;
+}
+.first-5-rule-container>.rule-text-container {
+	text-align: right;
+}
+.last-5-rule-container>.rule-text-container {
+	text-align: left;
+}
+.rule-text-divider {
+	background-color: white;
+	width: 100%;
+	height: 2px;
+}
+.rule-card-container {
+	grid-area: CARD;
+}
+.card {
+	display: block;
+    width: min(320px, 94vw, calc(94vh * 5 / 7));
+    aspect-ratio: 5 / 7;
+    margin: auto;
+}
+#rule-1-card {
+    border-top-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-image: url(files/rorschach/rorschach-blot-5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(247,232,225);
+    background-size: 130%;
+}
+#rule-2-card {
+    border-top-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-image: url(files/rorschach/rorschach-blot-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(247,232,225);
+    background-size: 165%;
+}
+#rule-3-card {
+    border-top-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-image: url(files/rorschach/rorschach-blot-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(247,232,225);
+    background-size: 140%;
+}
+#rule-4-card {
+    border-radius: 11px;
+    background-image: url(files/rorschach/rorschach-blot-6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(247,232,225);
+    background-size: 160%;
+}
+#rule-5-card {
+    border-radius: 11px;
+    background-image: url(files/rorschach/rorschach-blot-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(247,232,225);
+    background-size: 165%;
+}
+#rule-6-card {
+    border-radius: 11px;
+    background-image: url(files/rorschach/rorschach-blot-7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 150%;
+}
+#rule-7-card {
+    border-radius: 11px;
+    background-image: url(files/rorschach/rorschach-blot-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(247,232,225);
+    background-size: 110%;
+}
+#rule-8-card {
+    border-radius: 11px;
+    background-image: url(files/rorschach/rorschach-blot-9.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(240,250,250);
+    background-size: 115%;
+}
+#rule-9-card {
+    border-radius: 11px;
+    background-image: url(files/rorschach/rorschach-blot-8.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(240,250,250);
+    background-size: 130%;
+}
+#rule-10-card {
+    border-radius: 11px;
+    background-image: url(files/rorschach/rorschach-blot-10.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(240,250,250);
+    background-size: 105%;
+}
+
+
+
+
 
 
