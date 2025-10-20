@@ -1,1 +1,0 @@
-all 10 rules could have a different pattern/drawing in the background, that is animated when switching websites. I'm still not sure about colors, and the buttons on the websites, and if I want different fonts on each of the 10 rules
