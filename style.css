@@ -21,7 +21,9 @@
 }
 
 html {
-    background-color: purple;
+    background-image: url(files/color\ pallete.png);
+    background-size: cover;
+    background-position: center;
 }
 
 body {
