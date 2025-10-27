@@ -21,13 +21,12 @@
 }
 
 html {
-    background-color: black;
-}
-
-body {
     background-image: url(files/wp-cropped.jpg);
     background-size: cover;
     background-position: center;
+}
+
+body {
     border: 25px solid #ffd800;
     color: #ffd800;
 }
