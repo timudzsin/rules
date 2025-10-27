@@ -21,9 +21,7 @@
 }
 
 html {
-    background-image: url(files/color\ pallete.png);
-    background-size: cover;
-    background-position: center;
+    background-color: rgb(0, 255, 0);
 }
 
 body {
@@ -34,6 +32,8 @@ body {
     border: 25px solid #ffd800;
     color: #ffd800;
 }
+
+
 
 h1 {
     font-size: 150px;
