@@ -19,7 +19,6 @@
     margin: 0px;
     box-sizing: border-box;
 }
-
 html {
     background-color: black;
 }
@@ -28,14 +27,15 @@ body {
     background-image: url(files/wp-cropped.jpg);
     background-size: cover;
     background-position: center;
-    padding-top: env(safe-area-inset-top);
+    padding: 50px;
+/*     padding-top: env(safe-area-inset-top);
     padding-right: env(safe-area-inset-right);
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
-}
+ */}
 
 main {
-    border: 20px solid #ffd800;
+    border: 35px solid #ffd800;
     color: #ffd800;
 }
 
