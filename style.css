@@ -27,20 +27,21 @@ body {
     background-image: url(files/wp-cropped.jpg);
     background-size: cover;
     background-position: center;
-    padding: 50px;
-/*     padding-top: env(safe-area-inset-top);
-    padding-right: env(safe-area-inset-right);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
- */}
+    padding-top: max(0.1px, env(safe-area-inset-top));
+    padding-right: max(0.1px, env(safe-area-inset-right));
+    padding-bottom: max(0.1px, env(safe-area-inset-bottom));
+    padding-left: max(0.1px, env(safe-area-inset-left));
+}
 
 main {
-    border: 35px solid #ffd800;
+    margin: 5vw;
+    border: 3vw solid #ffd800;
+    padding: 2vw;
     color: #ffd800;
 }
 
 
 h1 {
-    font-size: 50px;
+    font-size: min(50px, 10vw);
     font-family: "blocky-bold";
 }
