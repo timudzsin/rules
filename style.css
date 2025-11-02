@@ -41,8 +41,6 @@ body {
     padding-right: max(0.1px, env(safe-area-inset-right));
     padding-bottom: max(0.1px, env(safe-area-inset-bottom));
     padding-left: max(0.1px, env(safe-area-inset-left));
-}
-body {
     background-color: black;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
