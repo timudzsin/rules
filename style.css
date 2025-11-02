@@ -78,7 +78,7 @@ main {
 
 
 #title {
-    margin-top: 25vh;
+    margin-top: 30vh;
     font-family: "bebas-bold";
     color: #ffd800;
     text-align: center;
@@ -94,7 +94,7 @@ main {
     text-align: center;
     color: #ffd800;
     font-size: 25px;
-    margin-bottom: 12vh
+    margin-bottom: 15vh;
 }
 
 
@@ -189,7 +189,7 @@ main {
 }
 }
 #birds {
-    animation: spin 25s ease-in-out infinite;
+    animation: spin 180s linear infinite;
 }
 @keyframes spin {
     from {
