@@ -59,7 +59,7 @@ main {
 
 
 #title {
-    margin-top: 22vh;
+    margin-top: 25vh;
     font-family: "bebas-bold";
     color: #ffd800;
     text-align: center;
@@ -130,7 +130,7 @@ main {
     color: #ffd800;
     font-size: 20px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1120px) {
 #credits-container-a {
     grid-template-columns: auto auto;
     grid-template-areas: "c c"
@@ -138,6 +138,7 @@ main {
 }
 #credits-container-c {
     padding-left: 0px;
+    text-align: center;
 }
 #credits-container-d {
     align-items: center;
@@ -149,9 +150,6 @@ main {
     grid-template-areas: "c"
                         "b"
                         "d";
-}
-#credits-container-c {
-    text-align: center;
 }
 #credits-container-d>h2{
     margin: 20px;
@@ -166,97 +164,3 @@ main {
 
 
 
-/* #credits-container-a {
-    margin-top: 27vh;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-#credits-container-b{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 7px;
-    align-content: end;
-}
-@media (max-width: 1200px) {
-#credits-container-b {
-    grid-template-columns: none;
-    grid-template-rows: auto auto auto;
-}    
-}
-#credits-container-b img {
-    width: 70px;
-}
-#credits-container-c {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-@media (max-width: 1200px) {
-#credits-container-c {
-    grid-template-columns: none;
-    grid-template-rows: auto auto;
-}    
-}
-#credits-container-d {
-    color: #ffd800;
-    font-family: "bebas-book";
-    font-size: 30px;
-    text-align: left;
-    padding-left: 8px;
-}
-#credits-container-e {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "bebas-bold";
-    color: #ffd800;
-    font-size: 20px;
-}
- */
-
-
-/* #credits-container-a {
-    margin-top: 27vh;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-@media (max-width: 1200px) {
-#credits-container-a {
-    grid-template-columns: none;
-}    
-}
-#credits-container-b {
-    display: grid;
-    grid-template-columns: min-content auto;
-}
-#credits-container-c {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
-    align-content: end;
-}
-@media (max-width: 500px) {
-#credits-container-c {
-    grid-template-columns: none;
-    grid-template-rows: 1fr 1fr 1fr;
-}    
-}
-#credits-container-c img{
-    width: 75px;
-}
-#credits-container-d {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "bebas-bold";
-    color: #ffd800;
-    font-size: 20px;
-}
-#credits-container-e {
-    color: #ffd800;
-    font-family: "bebas-book";
-    font-size: 30px;
-    text-align: left;
-    padding-left: 8px;
-}
-
- */
