@@ -6,7 +6,7 @@ const path = document.getElementById('rectPath');
 const textPath = document.querySelector('textPath');
 
 // setting the text content of the border, to the rules in random order.
-const rules = [
+const RULES = [
   "THIS IS RULE ONE . ",
   "THIS IS RULE ONE . ",
   "THIS IS RULE TWO . ",
@@ -29,11 +29,11 @@ const rules = [
   "RULE NUMBER TEN IS THIS ONE, THIS IS LONGER . ",
 ];
 // Fisher–Yates shuffle
-for (let i = rules.length - 1; i > 0; i--) {
+for (let i = RULES.length - 1; i > 0; i--) {
 	const j = Math.floor(Math.random() * (i + 1));
-	[rules[i], rules[j]] = [rules[j], rules[i]];
+	[RULES[i], RULES[j]] = [RULES[j], RULES[i]];
 }
-textPath.innerHTML=rules.join("");
+textPath.innerHTML=RULES.join("");
 
 function updateSVG() {
 	const { width, height } = borderContainer.getBoundingClientRect();
