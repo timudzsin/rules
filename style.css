@@ -59,8 +59,8 @@ body.loaded-body {
     margin-right: calc(4vw + env(safe-area-inset-right));
     margin-bottom: calc(4vw + env(safe-area-inset-bottom));
     margin-left: calc(4vw + env(safe-area-inset-left));
-    width: 92vw;
-    height: calc(100% - 8vw);
+    width: calc(92vw - env(safe-area-inset-left) - env(safe-area-inset-right));
+    height: calc(100% - 8vw - env(safe-area-inset-top) - env(safe-area-inset-bottom));
 }
 #svg-box {
     width: 100%;
