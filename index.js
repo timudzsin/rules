@@ -1,8 +1,30 @@
-// As soon as the entire page is completely loaded,
-window.addEventListener("load", () => {
-	// fade in the body
-	document.body.classList.add("loaded-body");
-});
+// code for the border
+const borderContainer = document.getElementById('border-container');
+const svg = document.getElementById('svg-box');
+const path = document.getElementById('rectPath');
+
+function updateSVG() {
+	const { width, height } = borderContainer.getBoundingClientRect();
+	const margin = width/31; // padding between edge and border text
+
+	// Update viewBox so coordinates match container size
+	svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+
+	// Compute path dynamically
+	const d = `
+	M${margin},${margin}
+	H${width - margin}
+	V${height - margin}
+	H${margin}
+	Z
+	`;
+	path.setAttribute('d', d);
+}
+
+updateSVG();
+new ResizeObserver(updateSVG).observe(borderContainer);
+
+
 
 
 // Intercept link clicks
@@ -24,3 +46,14 @@ document.querySelectorAll("a").forEach(link => {
 		}
 	});
 });
+
+
+
+
+// As soon as the entire page is completely loaded,
+window.addEventListener("load", () => {
+	// fade in the body
+	document.body.classList.add("loaded-body");
+});
+
+
