@@ -39,10 +39,7 @@ body {
     background-image: url(files/wp-cropped.jpg);
     background-size: cover;
     background-position: center top;
-    padding-top: max(0.1px, env(safe-area-inset-top));
-    padding-right: max(0.1px, env(safe-area-inset-right));
-    padding-bottom: max(0.1px, env(safe-area-inset-bottom));
-    padding-left: max(0.1px, env(safe-area-inset-left));
+    padding: 0.1px;
     background-color: black;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -58,7 +55,10 @@ body.loaded-body {
 #border-container {
     position: absolute;
     pointer-events: none;
-    margin: 4vw;
+    margin-top: calc(4vw + env(safe-area-inset-top));
+    margin-right: calc(4vw + env(safe-area-inset-right));
+    margin-bottom: calc(4vw + env(safe-area-inset-bottom));
+    margin-left: calc(4vw + env(safe-area-inset-left));
     width: 92vw;
     height: calc(100% - 8vw);
 }
@@ -71,8 +71,11 @@ body.loaded-body {
 
 
 main {
-    margin: 4vw;
-    border: 3vw dashed rgba(0, 255, 0, 0);
+    margin-top: calc(4vw + env(safe-area-inset-top));
+    margin-right: calc(4vw + env(safe-area-inset-right));
+    margin-bottom: calc(4vw + env(safe-area-inset-bottom));
+    margin-left: calc(4vw + env(safe-area-inset-left));
+    border: 3vw dashed rgba(35, 35, 255, 0.8);
     padding: 2vw;
     text-align: center;
 }
