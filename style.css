@@ -75,7 +75,7 @@ main {
     margin-right: calc(4vw + env(safe-area-inset-right));
     margin-bottom: calc(4vw + env(safe-area-inset-bottom));
     margin-left: calc(4vw + env(safe-area-inset-left));
-    border: 3vw dashed rgba(35, 35, 255, 0.8);
+    border: 3vw dashed rgba(225, 0, 255, 0.8);
     padding: 2vw;
     text-align: center;
 }
