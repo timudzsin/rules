@@ -28,7 +28,7 @@
 
 html {
     background-color: black;
-    filter: blur(0.5px) contrast(1.06);
+    filter: blur(min(0.055vw, 0.55px)) contrast(1.06);
 }
 
 
@@ -100,7 +100,7 @@ main {
 
 
 #title {
-    margin-top: 30vh;
+    margin-top: 39vh;
     font-family: "bebas-bold";
     color: #ffd800;
     text-align: center;
@@ -113,12 +113,12 @@ main {
 
 
 #quote-container {
-    margin-top: 2vh;
+    margin-top: 2.5vh;
     font-family: "bebas-regular";
     text-align: center;
     color: #ffd800;
     font-size: 25px;
-    margin-bottom: 15vh;
+    margin-bottom: 11vh;
 }
 
 
@@ -147,7 +147,7 @@ main {
 
 
 #credits-container-a {
-    margin-top: 27vh;
+    margin-top: 42vh;
     display: grid;
     grid-template-columns: min-content auto min-content;
     grid-template-areas: "b c d";
