@@ -90,12 +90,10 @@ main {
     text-decoration: none;
     font-family: "blocky-regular";
     font-size: 25px;
-}
-#lang-button>* {
     transition: 0.2s ease;
 }
-#lang-button:hover>* {
-    transform: scale(1.25);
+#lang-button:hover {
+    transform: scaleY(1.5) scaleX(1.07);
 } 
 
 
@@ -108,6 +106,7 @@ main {
     text-align: center;
     font-size: 11vw;
     transform: scaleY(2.2);
+    clip-path: inset(2vw 0 3vw 0); /* top right bottom left */
 }
 
 
@@ -137,7 +136,7 @@ main {
 }
 .rule-button:hover {
     color: #d4d2c5;
-    transform: scale(1.15);
+    transform: scaleY(1.3) scaleX(1.05);
 } 
 .bold-number {
     font-family: "blocky-bold";
