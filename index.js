@@ -2,8 +2,9 @@
 // grabbing the needed html elements
 const borderContainer = document.getElementById('border-container');
 const svg = document.getElementById('svg-box');
-const path = document.getElementById('rectPath');
-const textPath = document.querySelector('textPath');
+const svgPath = document.getElementById('rectPath');
+const svgTextPath = document.querySelector('textPath');
+const svgText = document.getElementById('svg-text');
 
 // setting the text content of the border, to the rules in random order.
 const RULES = [
@@ -33,24 +34,28 @@ for (let i = RULES.length - 1; i > 0; i--) {
 	const j = Math.floor(Math.random() * (i + 1));
 	[RULES[i], RULES[j]] = [RULES[j], RULES[i]];
 }
-textPath.innerHTML=RULES.join("");
+svgTextPath.innerHTML=RULES.join("");
 
 function updateSVG() {
 	const { width, height } = borderContainer.getBoundingClientRect();
-	const margin = width/29; // padding between edge and border text
+	const padding = 0.033 * width; // padding between edge and border text
 
 	// Update viewBox so coordinates(viewBox) of the svg match the container size
 	svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
 
-	// Compute path dynamically
+	// update the font size of the text, according to the size of the container
+	svgText.setAttribute('font-size', width/19.5);
+	svgText.setAttribute('letter-spacing', -width/150);
+	
+	// Compute the text path dynamically
 	const d = `
-	M${margin},${margin}
-	H${width - margin}
-	V${height - margin}
-	H${margin}
+	M${padding},${padding}
+	H${width - padding}
+	V${height - padding}
+	H${padding}
 	Z
 	`;
-	path.setAttribute('d', d);
+	svgPath.setAttribute('d', d);
 }
 
 updateSVG();
@@ -66,7 +71,7 @@ const QUOTES = [
 	`"This is quote number one."`,
 	`"This is quote number two."`,
 	`"This is quote number three, this one is a bit longer."`,
-	`"This is quote number four, this one is a lot longer. Lorem ipsum fingsum binsum ingus bungus bangus."`,
+	`"This is quote number four, this one is a lot longer. Lorem ipsum fingsum bingsum ass ass."`,
 ];
 // pick a random quote and put it inside the quote container
 const p = document.createElement("p");
