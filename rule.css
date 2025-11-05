@@ -84,8 +84,8 @@ main {
     content: "";
     inset: -20px;
     border-radius: 30px;
-    filter: blur(25px);
-    background-color: rgba(0, 0, 0, 0.4);
+/*     filter: blur(25px);
+ */    background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
     pointer-events: none;
 }
@@ -108,16 +108,14 @@ article {
     text-align: left;
     position: relative;
     z-index: 9;
-    overflow: visible;
-    isolation: isolate;
 }
 article::before {
     position: absolute;
     content: "";
     inset: -150px;
     border-radius: 125px;
-    filter: blur(125px);
-    background-color: rgba(0, 0, 0, 0.85);
+/*     filter: blur(125px);
+ */    background-color: rgba(0, 0, 0, 0.85);
     z-index: -1;
     pointer-events: none;
 }
@@ -143,8 +141,8 @@ article::before {
     position: absolute;
     content: "";
     inset: -20px;
-    filter: blur(30px);
-    border-radius: 20px;
+/*     filter: blur(30px);
+ */    border-radius: 20px;
     background-color: rgb(0, 0, 0, 0.3);
     z-index: -1;
     pointer-events: none;
