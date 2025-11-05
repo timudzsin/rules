@@ -106,7 +106,7 @@ main {
     text-align: center;
     font-size: 11vw;
     transform: scaleY(2.2);
-    clip-path: inset(14% 0 23% 0); /* top right bottom left */
+    clip-path: inset(10% 0 22% 0); /* top right bottom left */
 }
 
 
