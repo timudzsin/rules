@@ -28,7 +28,7 @@
 
 html {
     background-color: black;
-    filter: blur(min(0.055vw, 0.55px)) contrast(1.06);
+    filter: blur(0.55px) contrast(1.06);
 }
 
 

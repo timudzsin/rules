@@ -65,7 +65,7 @@ main {
 
 
 .rule-button {
-    filter: blur(min(0.055vw, 0.55px));
+    filter: blur(0.55px);
     margin-top: 10vh;
     margin-bottom: 45vh;
     text-align: center;
@@ -125,7 +125,7 @@ article::before {
 
 
 #title-button {
-    filter: blur(min(0.07vw, 0.7px));
+    filter: blur(0.7px);
     margin-top: 45vh;
     margin-bottom: 10vh;
     text-decoration: none;
@@ -148,7 +148,7 @@ article::before {
     pointer-events: none;
 }
 #title-button>h1 {
-    font-size: min(80px, 12vw);
+    font-size: min(90px, 12vw);
 }
 #title-button:hover{
     color: #d62420;
