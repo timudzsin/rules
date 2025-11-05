@@ -108,6 +108,8 @@ article {
     text-align: left;
     position: relative;
     z-index: 9;
+    overflow: visible;
+    isolation: isolate;
 }
 article::before {
     position: absolute;
