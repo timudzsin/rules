@@ -204,8 +204,8 @@ main {
                         "b"
                         "d";
 }
-#credits-container-d>h2{
-    margin: 20px;
+#credits-container-d > h2 {
+    margin: 5px;
 }
 }
 @media (max-width: 290px) {
