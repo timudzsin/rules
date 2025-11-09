@@ -28,6 +28,36 @@ const RULES = [
   "RULE NUMBER NINE IS THIS ONE, THIS IS LONGER . ",
   "RULE NUMBER TEN IS THIS ONE, THIS IS LONGER . ",
   "RULE NUMBER TEN IS THIS ONE, THIS IS LONGER . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
 ];
 // Fisher–Yates shuffle
 for (let i = RULES.length - 1; i > 0; i--) {
@@ -45,7 +75,7 @@ function updateSVG() {
 
 	// update the font size of the text, according to the size of the container
 	svgText.setAttribute('font-size', width/19.5);
-	svgText.setAttribute('letter-spacing', -width/150);
+	svgText.setAttribute('letter-spacing', -width/146);
 	
 	// Compute the text path dynamically
 	const d = `
