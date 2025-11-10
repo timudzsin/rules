@@ -1,13 +1,4 @@
-//    CODE FOR THE BORDER
-// grabbing the needed html elements
-const borderContainer = document.getElementById('border-container');
-const svg = document.getElementById('svg-box');
-const svgPath = document.getElementById('rectPath');
-const svgTextPath = document.querySelector('textPath');
-const svgText = document.getElementById('svg-text');
-
-// setting the text content of the border, to the rules in random order.
-const RULES = [
+const ENG_RULES = [
   "THIS IS RULE ONE . ",
   "THIS IS RULE ONE . ",
   "THIS IS RULE TWO . ",
@@ -31,6 +22,77 @@ const RULES = [
   "ÖÜÓŐÚÉÁŰ . ",
   "ÖÜÓŐÚÉÁŰ . ",
 ];
+const HUN_RULES = [
+  "EZ AZ EGYES SZABÁLY . ",
+  "EZ AZ EGYES SZABÁLY . ",
+  "EZ A KETTES SZABÁLY . ",
+  "EZ A KETTES SZABÁLY . ",
+  "EZ A HARMADIK SZABÁLY . ",
+  "EZ A HARMADIK SZABÁLY . ",
+  "EZ A NEGYEDIK SZABÁLY . ",
+  "EZ A NEGYEDIK SZABÁLY . ",
+  "EZ AZ ÖTÖS SZÁMÚ SZABÁLY, EZ IS HOSSZABB . ",
+  "EZ AZ ÖTÖS SZÁMÚ SZABÁLY, EZ IS HOSSZABB . ",
+  "EZ A HATOS SZÁMÚ SZABÁLY, EZ IS HOSSZABB . ",
+  "EZ A HATOS SZÁMÚ SZABÁLY, EZ IS HOSSZABB . ",
+  "A SZABÁLY HÉT EZ AZ . ",
+  "A SZABÁLY HÉT EZ AZ . ",
+  "A SZABÁLY NYOLC EZ AZ . ",
+  "A SZABÁLY NYOLC EZ AZ . ",
+  "A KILENCES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
+  "A KILENCES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
+  "A TÍZES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
+  "A TÍZES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+  "ÖÜÓŐÚÉÁŰ . ",
+];
+
+let RULES
+const filename = window.location.pathname.split("/").pop();
+if(filename === "index.html"){
+	RULES = ENG_RULES;
+}
+if(filename === "hun.html"){
+	RULES = HUN_RULES;
+}
+
+const ENG_QUOTES = [
+	`"This is quote number one."`,
+	`"This is quote number two."`,
+	`"This is quote number three, this one is a bit longer."`,
+	`"This is quote number four, this one is a lot longer. Lorem ipsum fingsum bingsum ass ass."`,
+];
+const HUN_QUOTES = [
+	`"Ez az első idézet."`,
+	`"Ez a második idézet."`,
+	`"Ez a harmadik idézet, ez egy kicsit hosszabb."`,
+	`"Ez a negyedik idézet, ez sokkal hosszabb. Lorem ipsum fingsum bingsum segg segg."`,
+];
+
+let QUOTES
+if(filename === "index.html"){
+	QUOTES = ENG_QUOTES;
+}
+if(filename === "hun.html"){
+	QUOTES = HUN_QUOTES;
+}
+
+
+
+
+
+
+
+
+//    CODE FOR THE BORDER
+// grabbing the needed html elements
+const borderContainer = document.getElementById('border-container');
+const svg = document.getElementById('svg-box');
+const svgPath = document.getElementById('rectPath');
+const svgTextPath = document.querySelector('textPath');
+const svgText = document.getElementById('svg-text');
+
+// setting the text content of the border, to the rules in random order.
 // Fisher–Yates shuffle
 for (let i = RULES.length - 1; i > 0; i--) {
 	const j = Math.floor(Math.random() * (i + 1));
@@ -70,12 +132,6 @@ new ResizeObserver(updateSVG).observe(borderContainer);
 
 
 //    CODE FOR THE RANDOM QUOTE
-const QUOTES = [
-	`"This is quote number one."`,
-	`"This is quote number two."`,
-	`"This is quote number three, this one is a bit longer."`,
-	`"This is quote number four, this one is a lot longer. Lorem ipsum fingsum bingsum ass ass."`,
-];
 // pick a random quote and put it inside the quote container
 const p = document.createElement("p");
 p.textContent = QUOTES[Math.floor(Math.random() * QUOTES.length)];

@@ -108,6 +108,15 @@ main {
     transform: scaleY(2.2);
     clip-path: inset(6% 0 22% 0); /* top right bottom left */
 }
+#hun-title {
+    margin-top: 39vh;
+    font-family: "bebas-bold";
+    color: #ffd800;
+    text-align: center;
+    font-size: 9.5vw;
+    transform: scaleY(2.2);
+    clip-path: inset(4% 0 22% 0); /* top right bottom left */
+}
 
 
 
@@ -117,7 +126,7 @@ main {
     font-family: "bebas-regular";
     text-align: center;
     color: #ffd800;
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 11vh;
 }
 
