@@ -30,34 +30,6 @@ const RULES = [
   "RULE NUMBER TEN IS THIS ONE, THIS IS LONGER . ",
   "ÖÜÓŐÚÉÁŰ . ",
   "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
 ];
 // Fisher–Yates shuffle
 for (let i = RULES.length - 1; i > 0; i--) {
@@ -68,7 +40,7 @@ svgTextPath.innerHTML=RULES.join("");
 
 function updateSVG() {
 	const { width, height } = borderContainer.getBoundingClientRect();
-	const padding = 0.033 * width; // padding between edge and border text
+	const padding = 0.053 * width; // padding between edge and border text
 
 	// Update viewBox so coordinates(viewBox) of the svg match the container size
 	svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
@@ -96,6 +68,7 @@ new ResizeObserver(updateSVG).observe(borderContainer);
 
 
 
+
 //    CODE FOR THE RANDOM QUOTE
 const QUOTES = [
 	`"This is quote number one."`,
@@ -107,6 +80,7 @@ const QUOTES = [
 const p = document.createElement("p");
 p.textContent = QUOTES[Math.floor(Math.random() * QUOTES.length)];
 document.getElementById("quote-container").appendChild(p);
+
 
 
 
@@ -137,11 +111,16 @@ document.querySelectorAll("a").forEach(link => {
 
 
 
+
 //    CODE FOR THE FADE IN EFFECT WHEN THE PAGE IS LOADED
 // As soon as the entire page is completely loaded,
 window.addEventListener("load", () => {
 	// fade in the body
 	document.body.classList.add("loaded-body");
 });
+
+
+
+
 
 
