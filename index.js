@@ -1,3 +1,4 @@
+// azért van minden szabály 2x, hogy hosszabb legyen a szöveg keret
 const ENG_RULES = [
   "THIS IS RULE ONE . ",
   "THIS IS RULE ONE . ",
@@ -19,8 +20,6 @@ const ENG_RULES = [
   "RULE NUMBER NINE IS THIS ONE, THIS IS LONGER . ",
   "RULE NUMBER TEN IS THIS ONE, THIS IS LONGER . ",
   "RULE NUMBER TEN IS THIS ONE, THIS IS LONGER . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
 ];
 const HUN_RULES = [
   "EZ AZ EGYES SZABÁLY . ",
@@ -43,18 +42,17 @@ const HUN_RULES = [
   "A KILENCES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
   "A TÍZES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
   "A TÍZES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
-  "ÖÜÓŐÚÉÁŰ . ",
-  "ÖÜÓŐÚÉÁŰ . ",
 ];
 
 let RULES
-const filename = window.location.pathname.split("/").pop();
-if(filename === "index.html"){
+const FILENAME = window.location.pathname.split("/").pop();
+if(FILENAME === "index.html"){
 	RULES = ENG_RULES;
 }
-if(filename === "hun.html"){
+if(FILENAME === "hun.html"){
 	RULES = HUN_RULES;
 }
+
 
 const ENG_QUOTES = [
 	`"This is quote number one."`,
@@ -70,10 +68,10 @@ const HUN_QUOTES = [
 ];
 
 let QUOTES
-if(filename === "index.html"){
+if(FILENAME === "index.html"){
 	QUOTES = ENG_QUOTES;
 }
-if(filename === "hun.html"){
+if(FILENAME === "hun.html"){
 	QUOTES = HUN_QUOTES;
 }
 
@@ -84,34 +82,80 @@ if(filename === "hun.html"){
 
 
 
-//    CODE FOR THE BORDER
-// grabbing the needed html elements
+
+// --- KÓD A SZÖVEG KERETHEZ ---
+// a szöveg keret egy SVG (Scalable Vector Graphics),
+// ami egy olyan HTML elem, amibe rajzolhatunk vektorokkal
 const borderContainer = document.getElementById('border-container');
 const svg = document.getElementById('svg-box');
 const svgPath = document.getElementById('rectPath');
 const svgTextPath = document.querySelector('textPath');
 const svgText = document.getElementById('svg-text');
 
-// setting the text content of the border, to the rules in random order.
-// Fisher–Yates shuffle
+// a szabályokat random összekeverem, és úgy állítom be
 for (let i = RULES.length - 1; i > 0; i--) {
 	const j = Math.floor(Math.random() * (i + 1));
 	[RULES[i], RULES[j]] = [RULES[j], RULES[i]];
 }
 svgTextPath.innerHTML=RULES.join("");
 
+// az updateSVG() metódus frissíti az SVG-t
 function updateSVG() {
+	// beállítom az SVG viewBox-át pont akkora méretűre, mint amekkora a tárolója
+	// az SVG viewBox-a a kordinátarendszerét jelenti, és nem a méretét
+	// tehát a viewBox lehet 10x10-es, a mérete meg lehet 50px X 50px
+	// vagy a viewbox lehet 93x93-as, a mérete meg lehet 50px X 50px 
+	// ez azért kell, hogy megfelelően tudjak majd számolni a kordinátarendszerben amikor átméreteződik
 	const { width, height } = borderContainer.getBoundingClientRect();
-	const padding = 0.053 * width; // padding between edge and border text
-
-	// Update viewBox so coordinates(viewBox) of the svg match the container size
 	svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+	/*
+			PÉLDÁUL:  viewBox="0 0 7 7"
 
-	// update the font size of the text, according to the size of the container
+		    0  1  2  3  4  5  6  7
+		    X--------------------->
+		0 Y
+		1 |
+		2 |
+		3 |
+		4 |
+		5 |
+		6 |
+		7 |
+		  V
+	*/
+
+
+	// a padding-ot, a font méretet, és a betűközt mind beállítom mérettől függően
+	// tehát ha kisebb lesz az SVG, akkor kisebb lesz a szöveg keret is
+	const padding = 0.053 * width;
 	svgText.setAttribute('font-size', width/19.5);
 	svgText.setAttribute('letter-spacing', -width/146);
-	
-	// Compute the text path dynamically
+	/*
+		+-------------------------------------------------------------+  <- viewBox
+		|             |                                               |
+		|             | <- padding                                    |
+		|             |                                               |
+		|         SZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGS         |
+		|         Z                                         Z         |
+		|         Ö                                         Ö         |
+		|         V                                         V         |
+		|         E                                         E         |
+		|         G                                         G         |
+		|         S                                         S         |
+		|         Z                                         Z         |
+		|         Ö                                         Ö         |
+		|         V                                         V         |
+		|         E                                         E         |
+		|         G                                         G         |
+		|         SZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGS         |
+		|                                                             |
+		|                                                             |
+		|                                                             |
+		+-------------------------------------------------------------+
+	*/
+
+
+	// a szöveg útját kiszámolom dinamikusan
 	const d = `
 	M${padding},${padding}
 	H${width - padding}
@@ -120,10 +164,60 @@ function updateSVG() {
 	Z
 	`;
 	svgPath.setAttribute('d', d);
+	/*
+		mintha egy vonalat rajzolnék,
+
+		1. kezdés bal felül (x,y)
+		M${padding},${padding}
+
+		2. vízszintes vonal (x-ig)
+		H${width - padding}
+		
+		3. függőleges vonal (y-ig)
+		V${height - padding}
+
+		4. vízszintes vonal (x-ig)
+		H${padding}
+
+		5. vissza a kezdőpontra
+		Z
+
+		Ez egy 10x10-es kordinátarendszerben 2-es padding-el így nézne ki. (10-8 = 2)
+
+		    0    1    2    3    4    5    6    7    8    9    10
+		    X--------------------------------------------------->
+		0 Y
+		  |
+		1 |
+		  |   kezdés bal felül (x=2, y=2)               vízszintes vonal (x=8 -ig)
+		2 |          1.5.   -------------------->   2.
+		  |              vissza a kezdőpontra
+		3 |                                         |
+		  |           A                             |
+		4 |           |                             |
+		  |           |                             |
+		5 |           |                             |
+		  |           |                             |
+		6 |           |                             |
+		  |           |                             |
+		7 |                                         V
+		  |   vízszintes vonal (x=2 -ig)                függőleges vonal (y=8 -ig)
+		8 |           4.   <--------------------    3.
+		  |
+		9 |
+		  |
+		10|
+		  V
+	*/
 }
 
+// meghívom egyszer, hogy inicializáljam a szöveg keretet
 updateSVG();
-// updateSVG() gets called every time the borderContainer is resized.
+// és meghívom mindig, amikor az SVG tárolója átméreteződik
+// tehát mindig amikor átméreteződik:
+//    1. beállítom a viewbox (kordinátarendszer) számozását
+//    2. beállítom a padding-ot és a szöveg méretét
+//    3. kiszámolom a szöveg útját
 new ResizeObserver(updateSVG).observe(borderContainer);
 
 
@@ -131,8 +225,10 @@ new ResizeObserver(updateSVG).observe(borderContainer);
 
 
 
-//    CODE FOR THE RANDOM QUOTE
-// pick a random quote and put it inside the quote container
+
+
+// --- KÓD A RANDOM IDÉZETHEZ ---
+// kiválasztok egy random elemet a QUOTES tömbből és belerakom a HTML tárolóba
 const p = document.createElement("p");
 p.textContent = QUOTES[Math.floor(Math.random() * QUOTES.length)];
 document.getElementById("quote-container").appendChild(p);
@@ -142,23 +238,24 @@ document.getElementById("quote-container").appendChild(p);
 
 
 
-//    CODE FOR SITE SWITCHING
-// Intercept link clicks
+
+
+// --- KÓD AZ OLDAL VÁLTÁSHOZ ---
 document.querySelectorAll("a").forEach(link => {
 	link.addEventListener("click", function (e) {
-		const href = this.href;
+		const HREF = this.href;
 
-		// only handle same-window navigation (ignore anchors, new tabs, etc.)
-		if (href && this.target !== "_blank" && !href.startsWith("#")) {
+		// csak az azonos ablakban történő navigációt kezeljük (anchor-ok, új fülek stb. kihagyása)
+		if (HREF && this.target !== "_blank" && !HREF.startsWith("#")) {
 			e.preventDefault();
 
-			// trigger fade out
+			// elhalványítás indítása CSS "transition" segítségével
 			document.body.classList.remove("loaded-body");
 
-			// wait for the transition to finish, then navigate
+			// megvárjuk a "transition" végét, aztán navigálunk
 			setTimeout(() => {
-				window.location.href = href;
-			}, 300); // match CSS transition duration
+				window.location.href = HREF;
+			}, 300); // ugyanannyi, mint a CSS "transition" időtartama
 		}
 	});
 });
@@ -168,10 +265,13 @@ document.querySelectorAll("a").forEach(link => {
 
 
 
-//    CODE FOR THE FADE IN EFFECT WHEN THE PAGE IS LOADED
-// As soon as the entire page is completely loaded,
+
+
+
+// --- KÓD AZ OLDAL BETÖLTÉSEKOR VALÓ HALVÁNYULÓ MEGJELENÉSHEZ ---
+// Amint az egész oldal teljesen betöltődött,
 window.addEventListener("load", () => {
-	// fade in the body
+	// a body be halványul egy CSS class segítségével
 	document.body.classList.add("loaded-body");
 });
 
