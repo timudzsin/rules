@@ -154,6 +154,7 @@ main {
     grid-area: b;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
     gap: 6px;
     justify-content: center;
     justify-items: center;
@@ -169,7 +170,8 @@ main {
     color: #ffd800;
     font-family: "bebas-book";
     font-size: 30px;
-    text-align: left;
+    letter-spacing: 7px;
+    text-align: justify;
     padding-left: 6px;
 }
 #credits-container-d {
@@ -181,7 +183,7 @@ main {
     color: #ffd800;
     font-size: 20px;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1080px) {
 #credits-container-a {
     grid-template-columns: auto auto;
     grid-template-areas: "c c"
