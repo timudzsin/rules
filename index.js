@@ -1,49 +1,40 @@
 // azért van minden szabály 2x, hogy hosszabb legyen a szöveg keret
 const ENG_RULES = [
-  "THIS IS RULE ONE . ",
-  "THIS IS RULE ONE . ",
-  "THIS IS RULE TWO . ",
-  "THIS IS RULE TWO . ",
-  "THIS IS THE THIRD RULE . ",
-  "THIS IS THE THIRD RULE . ",
-  "THIS IS THE FOURTH RULE . ",
-  "THIS IS THE FOURTH RULE . ",
-  "THIS IS RULE NUMBER FIVE, THIS IS ALSO LONGER . ",
-  "THIS IS RULE NUMBER FIVE, THIS IS ALSO LONGER . ",
-  "THIS IS RULE NUMBER SIX, THIS IS ALSO LONGER . ",
-  "THIS IS RULE NUMBER SIX, THIS IS ALSO LONGER . ",
-  "RULE SEVEN IS THIS ONE . ",
-  "RULE SEVEN IS THIS ONE . ",
-  "RULE EIGHT IS THIS ONE . ",
-  "RULE EIGHT IS THIS ONE . ",
-  "RULE NUMBER NINE IS THIS ONE, THIS IS LONGER . ",
-  "RULE NUMBER NINE IS THIS ONE, THIS IS LONGER . ",
-  "RULE NUMBER TEN IS THIS ONE, THIS IS LONGER . ",
-  "RULE NUMBER TEN IS THIS ONE, THIS IS LONGER . ",
+	"THISISRULEONE.",
+	"THISISRULEONE.",
+	"THISISRULETWO.",
+	"THISISRULETWO.",
+	"THISISTHETHIRDRULE.",
+	"THISISTHETHIRDRULE.",
+	"THISISTHEFOURTHRULE.",
+	"THISISTHEFOURTHRULE.",
+	"THISISRULENUMBERFIVE,THISISALSOLONGER.",
+	"THISISRULENUMBERFIVE,THISISALSOLONGER.",
+	"THISISRULENUMBERSIX,THISISALSOLONGER.",
+	"THISISRULENUMBERSIX,THISISALSOLONGER.",
+	"RULESEVENISTHISONE.",
+	"RULESEVENISTHISONE.",
+	"RULEEIGHTISTHISONE.",
+	"RULEEIGHTISTHISONE.",
 ];
 const HUN_RULES = [
-  "EZ AZ EGYES SZABÁLY . ",
-  "EZ AZ EGYES SZABÁLY . ",
-  "EZ A KETTES SZABÁLY . ",
-  "EZ A KETTES SZABÁLY . ",
-  "EZ A HARMADIK SZABÁLY . ",
-  "EZ A HARMADIK SZABÁLY . ",
-  "EZ A NEGYEDIK SZABÁLY . ",
-  "EZ A NEGYEDIK SZABÁLY . ",
-  "EZ AZ ÖTÖS SZÁMÚ SZABÁLY, EZ IS HOSSZABB . ",
-  "EZ AZ ÖTÖS SZÁMÚ SZABÁLY, EZ IS HOSSZABB . ",
-  "EZ A HATOS SZÁMÚ SZABÁLY, EZ IS HOSSZABB . ",
-  "EZ A HATOS SZÁMÚ SZABÁLY, EZ IS HOSSZABB . ",
-  "A SZABÁLY HÉT EZ AZ . ",
-  "A SZABÁLY HÉT EZ AZ . ",
-  "A SZABÁLY NYOLC EZ AZ . ",
-  "A SZABÁLY NYOLC EZ AZ . ",
-  "A KILENCES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
-  "A KILENCES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
-  "A TÍZES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
-  "A TÍZES SZÁMÚ SZABÁLY EZ AZ, EZ HOSSZABB . ",
+	"EZAZEGYESSZABÁLY.",
+	"EZAZEGYESSZABÁLY.",
+	"EZAKETTESSZABÁLY.",
+	"EZAKETTESSZABÁLY.",
+	"EZAHARMADIKSZABÁLY.",
+	"EZAHARMADIKSZABÁLY.",
+	"EZANEGYEDIKSZABÁLY.",
+	"EZANEGYEDIKSZABÁLY.",
+	"EZAZÖTÖSSZÁMÚSZABÁLY,EZISHOSSZABB.",
+	"EZAZÖTÖSSZÁMÚSZABÁLY,EZISHOSSZABB.",
+	"EZAHATOSSZÁMÚSZABÁLY,EZISHOSSZABB.",
+	"EZAHATOSSZÁMÚSZABÁLY,EZISHOSSZABB.",
+	"ASZABÁLYHÉTEZAZ.",
+	"ASZABÁLYHÉTEZAZ.",
+	"ASZABÁLYNYOLCEZAZ.",
+	"ASZABÁLYNYOLCEZAZ.",
 ];
-
 let RULES
 const FILENAME = window.location.pathname.split("/").pop();
 if(FILENAME === "index.html"){
@@ -109,7 +100,7 @@ function updateSVG() {
 	const { width, height } = borderContainer.getBoundingClientRect();
 	svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
 	/*
-			PÉLDÁUL:  viewBox="0 0 7 7"
+			például:  viewBox="0 0 7 7"
 
 		    0  1  2  3  4  5  6  7
 		    X--------------------->
@@ -130,24 +121,27 @@ function updateSVG() {
 	const padding = 0.053 * width;
 	svgText.setAttribute('font-size', width/19.5);
 	svgText.setAttribute('letter-spacing', -width/146);
+	//const padding = 0.036 * width;
+	//svgText.setAttribute('font-size', width/15);
+	//svgText.setAttribute('letter-spacing', width/170);
 	/*
 		+-------------------------------------------------------------+  <- viewBox
 		|             |                                               |
 		|             | <- padding                                    |
 		|             |                                               |
 		|         SZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGS         |
-		|         Z                                         Z         |
-		|         Ö                                         Ö         |
+		|         G                                         Z         |
+		|         E                                         Ö         |
 		|         V                                         V         |
-		|         E                                         E         |
-		|         G                                         G         |
+		|         Ö                                         E         |
+		|         Z                                         G         |
 		|         S                                         S         |
-		|         Z                                         Z         |
-		|         Ö                                         Ö         |
+		|         G                                         Z         |
+		|         E                                         Ö         |
 		|         V                                         V         |
-		|         E                                         E         |
-		|         G                                         G         |
-		|         SZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGSZÖVEGS         |
+		|         Ö                                         E         |
+		|         Z                                         G         |
+		|         SGEVÖZSGEVÖZSGEVÖZSGEVÖZSGEVÖZSGEVÖZSGEVÖZS         |
 		|                                                             |
 		|                                                             |
 		|                                                             |
@@ -182,7 +176,7 @@ function updateSVG() {
 		5. vissza a kezdőpontra
 		Z
 
-		Ez egy 10x10-es kordinátarendszerben 2-es padding-el így nézne ki. (10-8 = 2)
+		Ez pl egy 10x10-es kordinátarendszerben 2-es padding-el így nézne ki. (10-2 = 8)
 
 		    0    1    2    3    4    5    6    7    8    9    10
 		    X--------------------------------------------------->
@@ -191,7 +185,7 @@ function updateSVG() {
 		1 |
 		  |   kezdés bal felül (x=2, y=2)               vízszintes vonal (x=8 -ig)
 		2 |          1.5.   -------------------->   2.
-		  |              vissza a kezdőpontra
+		  |             vissza a kezdőpontra
 		3 |                                         |
 		  |           A                             |
 		4 |           |                             |

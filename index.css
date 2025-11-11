@@ -17,6 +17,10 @@
     font-family: "blocky-bold";
     src: url("files/uni05_63.ttf") format("truetype");
 }
+@font-face {
+    font-family: "nickel-gothic";
+    src: url("files/Nickel\ Gothic\ Compressed\ Regular.ttf") format("truetype");
+}
 * {
     padding: 0px;
     margin: 0px;
@@ -28,7 +32,7 @@
 
 html {
     background-color: black;
-    filter: blur(0.5px);
+    filter: blur(0.45px);
 }
 
 
@@ -99,34 +103,19 @@ main {
 
 
 
-#title {
+#title-svg {
     margin-top: 39vh;
-    font-family: "bebas-bold";
-    color: #ffd800;
-    text-align: center;
-    font-size: 11vw;
-    transform: scaleY(2.2);
-    clip-path: inset(6% 0 22% 0); /* top right bottom left */
-}
-#hun-title {
-    margin-top: 39vh;
-    font-family: "bebas-bold";
-    color: #ffd800;
-    text-align: center;
-    font-size: 9.5vw;
-    transform: scaleY(2.2);
-    clip-path: inset(4% 0 22% 0); /* top right bottom left */
+    margin-bottom: 2.5vh;
 }
 
 
 
 
 #quote-container {
-    margin-top: 2.5vh;
     font-family: "bebas-regular";
     text-align: center;
     color: #ffd800;
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 11vh;
 }
 
