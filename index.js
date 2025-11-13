@@ -35,14 +35,6 @@ const HUN_RULES = [
 	"ASZABÁLYNYOLCEZAZ.",
 	"ASZABÁLYNYOLCEZAZ.",
 ];
-let RULES
-const FILENAME = window.location.pathname.split("/").pop();
-if(FILENAME === "hun.html"){
-	RULES = HUN_RULES;
-}else{
-	RULES = ENG_RULES;
-}
-
 
 const ENG_QUOTES = [
 	`"This is quote number one."`,
@@ -57,12 +49,18 @@ const HUN_QUOTES = [
 	`"Ez a negyedik idézet, ez sokkal hosszabb. Lorem ipsum fingsum bingsum segg segg."`,
 ];
 
-let QUOTES
-if(FILENAME === "hun.html"){
+
+const FILENAME = window.location.pathname.split("/").pop();
+let RULES;
+let QUOTES;
+if(FILENAME === "hun.html") {
+	RULES = HUN_RULES;
 	QUOTES = HUN_QUOTES;
-}else{
+} else {
+	RULES = ENG_RULES;
 	QUOTES = ENG_QUOTES;
 }
+
 
 
 
