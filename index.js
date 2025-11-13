@@ -37,11 +37,10 @@ const HUN_RULES = [
 ];
 let RULES
 const FILENAME = window.location.pathname.split("/").pop();
-if(FILENAME === "index.html"){
-	RULES = ENG_RULES;
-}
 if(FILENAME === "hun.html"){
 	RULES = HUN_RULES;
+}else{
+	RULES = ENG_RULES;
 }
 
 
@@ -59,11 +58,10 @@ const HUN_QUOTES = [
 ];
 
 let QUOTES
-if(FILENAME === "index.html"){
-	QUOTES = ENG_QUOTES;
-}
 if(FILENAME === "hun.html"){
 	QUOTES = HUN_QUOTES;
+}else{
+	QUOTES = ENG_QUOTES;
 }
 
 
