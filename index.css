@@ -32,7 +32,6 @@
 
 html {
     background-color: black;
-    filter: blur(0.4px);
 }
 
 
@@ -92,9 +91,12 @@ main {
     text-align: center;
     color: #ffd800;
     text-decoration: none;
-    font-family: "blocky-regular";
-    font-size: 25px;
     transition: 0.2s ease;
+
+
+    font-family: "bebas-book";
+    font-size: 30px;
+    letter-spacing: 7px;
 }
 #lang-button:hover {
     transform: scaleY(1.3) scaleX(1.05);
