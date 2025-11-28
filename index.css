@@ -39,7 +39,7 @@ html {
 
 body {
     min-height: 100vh;
-    background-image: url(files/wp-cropped.jpg);
+    background-image: url(files/wp-cropped-imgupscaler.jpg);
     background-size: cover;
     background-position: center top;
     padding: 0.1px;

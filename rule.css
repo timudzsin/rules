@@ -40,7 +40,7 @@ html {
 
 body {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(files/wp-gray.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(files/wp-gray-imgupscaler.jpg);
     background-size: cover;
     background-position: center top;
     background-color: black;
